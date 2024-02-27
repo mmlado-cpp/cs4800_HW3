@@ -1,0 +1,31 @@
+@startuml
+class Folder {
+  - name: String
+  - subFolders: Folder[]
+  - files: File[]
+
+  + Folder(name: String)
+  + getName(): String
+  + setName(name: String): void
+  + getSubFolders(): Folder[]
+  + addSubFolder(folder: Folder): void
+  + removeSubFolder(folder: Folder): void
+
+  + addFile(file: File): void
+  + removeFile(file: File): void
+  + toString(): String
+  + printFolderContents(): void
+}
+
+class File {
+  - name: String
+
+  + File(name: String)
+  + getName(): String
+  + setName(name: String): void
+  + toString(): String
+}
+
+Folder "1" *-- "0..*" Folder
+Folder "1" *-- "0..*" File
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+
+object "<u>CS4800:Course</u>" as CS {
+    courseName = "Software Engineering"
+    instructor = [Nima Davarpanah]
+    textbook = [Clean Code]
+}
+
+object "<u>Nima:Instructor</u>" as prof {
+    firstName = "Nima"
+    lastName = "Davarpanah"
+    officeNumber = "3-2636"
+}
+
+object "<u>Clean Code:Textbook</u>" as CC {
+    title = "Clean Code"
+    author = "Robert C. Martin"
+    publisher = "Prentice Hall"
+}
+
+CS o-- prof
+CS o-- CC
+
+@enduml

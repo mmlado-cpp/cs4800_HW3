@@ -1,0 +1,109 @@
+@startuml
+
+object "<u>php_demo1:Folder</u>" as folder1 {
+    name = "php_demo1"
+    subFolders = ["Source Files", "Include Path", "Remote Files"]
+    files = []
+}
+
+object "<u>Source Files:Folder</u>" as folder2 {
+    name = "Source Files"
+    subFolders = [".phalcon", "cache", "public"]
+    files = []
+}
+object "<u>public:Folder</u>" as folder3 {
+     name = "public"
+     subFolders = []
+     files = [".htaccess", ".htrouter.php", "index.html"]
+ }
+object "<u>phalcon:Folder</u>" as folder4 {
+    name = ".phalcon"
+    subFolders = []
+    files = []
+}
+
+object "<u>cache:Folder</u>" as folder5 {
+    name = "cache"
+    subFolders = []
+    files = []
+}
+object "<u>htaccess:File</u>" as file1 {
+    name = ".htaccess"
+}
+
+
+object "<u>htrouter.php:File</u>" as file2 {
+    name = ".htrouter.php"
+}
+object "<u>index.html:File</u>" as file3 {
+    name = "index.html"
+}
+
+object "<u>Include Path:Folder</u>" as folder6 {
+    name = "Include Path"
+    subFolders = []
+    files = []
+}
+object "<u>Remote Files:Folder</u>" as folder7 {
+    name = "Remote Files"
+    subFolders = []
+    files = []
+}
+folder1 o-- folder2
+folder1 o-- folder6
+folder1 o-- folder7
+folder2 o-- folder3
+file1 o-- folder3
+file2 o-- folder3
+file3 o-- folder3
+
+folder2 o-- folder4
+folder2 o-- folder5
+
+
+
+'app folder (root: Source Files)
+'is deleted from folder structure
+object "<u>app:Folder</u>" as folder8 {
+    name = "app"
+    subFolders = ["config", "controllers", "library", "migrations", "models", "views"]
+    files = []
+}
+object "<u>config:Folder</u>" as folder9 {
+    name = "config"
+    subFolders = []
+    files = []
+}
+object "<u>controllers:Folder</u>" as folder10 {
+    name = "controllers"
+    subFolders = []
+    files = []
+}
+object "<u>library:Folder</u>" as folder11 {
+    name = "library"
+    subFolders = []
+    files = []
+}
+object "<u>migrations:Folder</u>" as folder12 {
+    name = "migrations"
+    subFolders = []
+    files = []
+}
+object "<u>models:Folder</u>" as folder13 {
+    name = "models"
+    subFolders = []
+    files = []
+}
+object "<u>views:Folder</u>" as folder14 {
+    name = "views"
+    subFolders = []
+    files = []
+}
+folder8 o-- folder9
+folder8 o-- folder10
+folder8 o-- folder11
+folder8 o-- folder12
+folder8 o-- folder13
+folder8 o-- folder14
+
+@enduml

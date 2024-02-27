@@ -1,0 +1,20 @@
+@startuml
+object "<u>mayflower:Ship</u>" as mf {
+  name = "Mayflower"
+  buildDate = "1600"
+}
+
+object "<u>titanic:Ship</u>" as ts {
+  name = "Titanic"
+  buildDate = "1984"
+  maxPassengers = 2000
+}
+
+object "<u>uss arizona:Ship</u>" as ussaz {
+  name = "USS Arizona"
+  buildDate = "2000"
+  cargoCapacity = 1000
+}
+
+
+@enduml
